@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        .container{
+            height: fit-content;
+            
+            display: flex;
+            flex-wrap: wrap;
+            /*justify-content: space-around;*/
+            /*takes space evenly around box so space b/w 2 box = space of box 1 + space of box 2*/
+
+            /* justify-content: space-between; */
+            /*takes space between two boxex*/
+
+            justify-content: space-evenly;
+            /*takes even space between two boxex and border*/
+
+            align-items: center;
+        }
+
+        .box{
+            margin: 20px;
+            height: 200px;
+            width: 25%;
+            border: 2px solid red;
+            background: linear-gradient(45deg,yellow,red,pink, purple);
+            font-size: 25px;
+            padding: 60px;
+            box-sizing: border-box;           
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="box">Vaibhav</div>
+        <div class="box">Aman</div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box">Vaibhav</div>
+        <div class="box">Aman</div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box">Vaibhav</div>
+        <div class="box">Aman</div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+
+
+    </div>
+</body>
+</html>
