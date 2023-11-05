@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .container{
+            height: 100vh;
+            width: 100%;
+            background-color: rgb(63, 63, 88);
+            display: flex;
+            padding: 10px;
+            justify-content: space-around;
+        }
+
+        .first{
+            height: 100%;
+            width: 23%;
+            background-color: green;
+        }
+        .mid{
+            height: 100%;
+            width: 48%;
+        }
+        .top{
+            height: 33%;
+            width: 100%;
+            background-color: green;
+        }
+        .bottom{
+            height: 63%;
+            width: 100%;
+            margin-top: 23px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-content: space-between;
+        }
+        .box{
+            height: 48%;
+            width: 48%;
+            background-color: yellow;
+        }
+        .last{
+            height: 100%;
+            width: 23%;
+        }
+        .upper{
+            height: 33%;
+            width: 100%;
+            background-color: red;
+        }
+        .lower{
+            height: 63%;
+            width: 100%;
+            background-color: green;
+            margin-top: 23px;
+        }
+        .b1{
+            background-color: red;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="first"></div>
+
+        <div class="mid">
+            <div class="top"></div>
+
+            <div class="bottom">
+                <div class="box"></div>
+                <div class="box b1"></div>
+                <div class="box b1"></div>
+                <div class="box"></div>
+            </div>
+
+        </div>
+
+        <div class="last">
+            <div class="upper"></div>
+            <div class="lower"></div>
+        </div>
+    </div>
+</body>
+</html>
