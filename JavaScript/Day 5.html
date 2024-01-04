@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+
+    <script>
+        function add(a,b){
+            console.log(a+b);
+        }
+        function plus(a,b=40){
+            return a+b;
+        }
+        function sub(a,b){
+            console.log(a-b);
+        }
+        function mult(a,b){
+            console.log(a*b);
+        }
+        function divide(a,b){
+            console.log(a/b);
+        }
+        add(10,20);
+        let a = plus(10,40);
+        console.log(a);
+        sub(10,20);
+        mult(10,20);
+        divide(10,20);
+
+        function isNotPrime(number) {
+    if (number <= 1) {
+        return true;
+    }
+
+    for (let i = 2; i < number; i++) {
+        if (number % i === 0) {
+            return true;
+        }
+    }
+
+    return false;
+}
+
+const num = 15;
+if (isNotPrime(num)) {
+    console.log(`${num} is not a prime number.`);
+} else {
+    console.log(`${num} is a prime number.`);
+}
+
+
+    </script>
+</body>
+</html>
