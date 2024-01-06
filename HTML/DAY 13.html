@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        
+        .container{
+            min-width: 1200px;
+        }
+
+        .header{
+            /* border: 2px solid red; */
+            display: flex;
+            position: sticky;
+            top: 0px;
+            justify-content: space-between;
+            background-color: hsl( 0deg 0% 0.39% );
+        }
+        
+        .hleft{
+            display: flex;
+            gap: 4px;
+            color: #fff;
+            margin-left: 10px;
+            align-items: center;
+            padding: 5px;
+        }
+
+        .lsidet{
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            color: #9b9dad;
+            font-family: sans-serif;
+            gap: 5px;
+        }
+        .foll{
+            padding: 0px 4px;
+            border-radius: 2px;
+            background-color: hsl( 139.41deg 58.62% 54.51% );
+            color: black;
+        }
+
+        .lsideb{
+            font-family: sans-serif;
+            font-weight: bold;
+            font-size: 25px;
+            margin: 0px 10px;
+        }
+
+        .logo{
+            font-size: 25px;
+            color: #fff;
+        }
+
+        .hright{
+            align-items: center;
+            padding: 10px;
+        }
+
+        button{
+            background-color: hsl( 227.37deg 12.26% 30.39% );
+            color: #fff;
+            padding: 12px;
+            border: none;
+            border-radius: 7px;
+            margin-right: 5px;
+            font-family: sans-serif;
+            cursor: pointer;
+        }
+
+        .Signup{
+            background-color: hsl( 139.41deg 58.62% 54.51% );
+        }
+
+        .bottom{
+            display: grid;
+            grid-template-columns:1fr 4fr;
+
+        }
+        .left{
+            background-color: #3a4043;
+        }
+        ul{
+            position: fixed;
+            padding-left: 60px;
+        }
+        li{
+            list-style: none;
+            font-family: sans-serif;
+            font-weight: bold;
+            font-size: 20px;
+            color: #fff;
+            margin: 30px;
+        }
+
+        h1{
+            font-family: sans-serif;
+            color: #fff;
+        }
+
+        p{
+            text-align: justify;
+            font-family: sans-serif;
+            font-size: 18px;
+            color: #fff;
+        }
+
+        .box{
+            padding: 100px;
+        }
+        .m1{
+            background: #036b5d;
+            background: linear-gradient(to right, #164b3b, #187958, #007250);
+        }
+        
+
+        .m5{
+            background: #25d39f;
+            background: linear-gradient(to left, #03b8ac, #54868f, #025f5f);
+            /* padding: 50px; */
+        }
+
+        .m6{
+            background: #7f7fd5;
+            background: linear-gradient(to right, #91eae4, #86a8e7, #7f7fd5);
+            padding: 50px;
+        }
+        .m7{
+            background: #313638;
+            background: linear-gradient(to right, #3d504f, #383a3f, #000000);
+        }
+        .ftop{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+
+        .ftop1{
+            text-align: center;
+            align-items: center;
+        }
+
+        
+        .icons{
+            font-size: 25px;
+            text-align: center;
+            color: #fff;
+            padding: 10px 0px;
+            margin: 0px 85px;
+            border-radius: 80px;
+            background-color: hsl( 139.41deg 58.62% 54.51% );
+        }
+        .msg{
+            color: #fff;
+            font-family: sans-serif;
+            
+        }
+        .fbottom{
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+            /* filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.4)); */
+        }
+        .fourm{
+            background-color: #3a4043;
+            padding: 30px 30px;
+            font-family: sans-serif;
+            color: #fff;
+            /* font-size: 18px; */
+        }
+        
+        img{
+            height: 100%;
+            width: 100%;
+        }
+        .cp-2{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        
+        .inp{
+            border: none;
+            margin: 5px;
+        }
+        .input{
+            width: 100%;
+            background: none;
+            border: none;
+            font-size: 18px;
+            border-bottom: 1px solid grey;
+            outline: none;
+            color: rgb(218, 238, 255);
+        }
+        .fgp{
+            margin: 10px 10px;
+        }
+        .send{
+            background-color: rgba(0, 0, 0, 0.37);
+        }
+        
+        .blog{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        
+        .card{
+            display: grid;
+            grid-template-rows: 2fr 1.5fr .5fr;
+            background-color: #fff;
+            border-radius: 15px;
+            margin: 10px;
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.24);
+        }
+        
+        .card-top img{
+            border-top-right-radius: 15px;
+            border-top-left-radius: 15px;
+        }
+
+        .card-body{
+            padding: 5px 14px;
+        }
+        h4{
+            text-transform: capitalize;
+            font-family: sans-serif;
+            font-size: 20px;
+            margin: 5px;
+        }
+        .para{
+            color: #000000;
+            padding: 5px 10px;
+            font-size: 16px;
+            word-spacing: 4px;
+            font-family: sans-serif;
+        }
+
+        .tag{
+            padding: 2px 5px;
+            text-align: center;
+            font-family: sans-serif;
+            font-size: 12px;
+            color: #fff;
+            border-radius: 15px;
+        }
+        .tag-blue{
+            background: #56CCF2;
+            background: linear-gradient(to bottom, #2F80ED, #56CCF2);
+        }
+
+        .tag-brown {
+            background: #D1913C;
+            background: linear-gradient(to bottom, #FFD194, #D1913C);
+        }
+
+        .tag-red {
+            background: #cb2d3e;
+            background: linear-gradient(to bottom, #ef473a, #cb2d3e);
+        }
+
+        .card-bott{
+            display: flex;
+            padding: 10px;
+        }
+        .user-icon{
+            align-items: center;
+            justify-content: center;
+            font-size: 25px;
+            color: #fff;
+            padding: 10px 10px;
+            border-radius: 100px;
+        }
+
+        .u1{
+            background: #56CCF2;
+            background: linear-gradient(to bottom, #2F80ED, #56CCF2);
+        }
+
+        .u2{
+            background: #D1913C;
+            background: linear-gradient(to bottom, #FFD194, #D1913C);
+        }
+
+        .u3{
+            background: #cb2d3e;
+            background: linear-gradient(to bottom, #ef473a, #cb2d3e);
+        }
+        .user-info{
+            font-family: sans-serif;
+            font-size: 20px;
+            /* font-weight: bold; */
+            margin: 10px ;
+        }
+        .user-post{
+            font-weight: none;
+            color: #3d504f;
+        }
+
+        .about-us{
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            /* border: 1px solid black; */
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.24);
+        }
+
+        .about-image{
+            height: 100%;
+            width: 100%;
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.747);
+        }
+
+        .about-text{
+            padding: 30px;
+        }
+        .about-text1{
+            font-size: 30px;
+        }
+        .about-text2{
+            font-size: 20px;
+            font-weight: bold;
+            font-family: sans-serif;
+        }
+        .about-text5{
+            margin: 10px 0px;
+        }
+        .about-text5 p{
+            line-height: 30px;
+        }
+        .designer{
+            color: #13b3a8;
+        }
+        .about-button button{
+            margin: 30px 0px;
+            border-radius: 100px;
+            background-color: #009c92;
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.24);
+        }
+
+        .home-page{
+            /* border: 2px solid yellow ; */
+            display: grid;
+            grid-template-rows: 1fr .25fr .75fr .25fr;
+            box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.24);
+            padding: 50px;
+        }
+
+        .home-image{
+            /* border: 2px solid rgb(255, 196, 0); */
+            margin-right: 70%;
+            border: 2px solid white;
+            border-radius: 400px;
+          
+        }
+        .home-image img{
+            height: 100%;
+            width: 100%;
+            border-radius: 100px;
+        }
+
+        .home-para p{
+
+            line-height: 30px;
+            font-family: cursive;
+        }
+
+        .home-name h1{
+
+            font-family: cursive;
+        }
+
+        .home-button button{
+            background-color: #23bb49;
+            border-radius: 100px;
+        } 
+        .home-padding{
+            padding: 10px 20px;
+        }
+
+        a{
+            transition: scroll-top 0.5s ease-in-out;
+            text-decoration: none;
+
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="hleft">
+                <div class="logo"><i class="fa-brands fa-codepen"></i></div>
+                <div class="lside"><div class="lsidet"><div class="para"><p>A Pen by Adrian Gyuricska</p></div>
+                <div class="follow"><button class="foll">+Follow</button></div></div>
+                <div class="lsideb"><p>Layout</p></div>
+            </div>
+            </div>
+            <div class="hright">
+                <button><i class="fa-solid fa-heart"></i></button>
+                <button>View Source Code</button>
+                <button class="Signup">Sign Up</button>
+                <button>Login</button>
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="left">
+                <ul>
+                   <a href="#home"><li>Home</li></a>
+                   <a href="#about"><li>About</li></a>
+                   <a href="#blog"> <li>Blog</li></a>
+                   <a href="#contact"><li>Contact</li></a>
+                </ul>
+            </div>
+            <div class="right">
+                <div class="box  m1" id="home">
+                    <div class="home-page">
+                        <div class="home-image">
+                            <img src="https://img.freepik.com/free-vector/home-interior-background-video-conferencing_52683-45472.jpg?w=740&t=st=1702027759~exp=1702028359~hmac=30e08fb692849443911231bebe9e67bf6e1e30be83b78038a0649413d2733617" alt="">
+                        </div>
+                        <div class="home-name  home-padding"><h1>Welcome to Aurolia</h1></div>
+                        <div class="home-para  home-padding"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea debitis animi vero dignissimos praesentium obcaecati culpa voluptatem, quibusdam recusandae error non molestias nihil, minima tempore earum repellendus nobis fugit ab voluptatum id modi nemo unde! Aut quod nihil recusandae expedita alias a, illum minima, asperiores tempora perspiciatis neque nulla doloremque!</p></div>
+                        <div class="home-button  home-padding"><button>View More</button></div>
+                    </div>
+                </div>
+                
+                <div class="box  m5" id="about">
+                    <div class="about-us">
+                        <div class="about-image"><img src="https://www.referenceforbusiness.com/photos/teams-350.jpg"alt=""></div>
+                        <div class="about-text">
+                            <div class="about-text1"><h1>About Us</h1></div>
+                            <div class="about-text2"><h3>Developer <span class="designer">& Designer</span></h3></div>
+                            <div class="about-text5"><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae nobis sequi reprehenderit tempore quasi iusto Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus iusto unde ex sed tempore odio assumenda tempora a officia ullam, provident vel quibusdam dolorum. Fuga soluta sapiente deleniti itaque fugiat.</p></div>
+                            <div class="about-button"><button>Let's Talk</button></div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="box  m6" id="blog">
+                    <div class="blog">
+                        <div class="card">
+                            <div class="card-top">
+                                <img src="https://images.unsplash.com/photo-1581013793663-dedd7e462266?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=400&ixid=MnwxfDB8MXxyYW5kb218MHx8Y29tcHV0ZXJ8fHx8fHwxNzAxNzY3ODQ2&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=600" alt="">
+                            </div>
+
+                            <div class="card-body">
+                                <span class="tag  tag-blue">Technology</span>
+                                <h4>What's New in 2024 Tech</h4>
+                                <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi perferendis molestiae non nemo doloribus. Doloremque, nihil! At ea atque quidem!</p>
+                            </div>
+
+                            <div class="card-bott">
+                                <div class="user"><div class="user-icon  u1"><i class="fa-solid fa-user"></i></div></div>
+                                <div class="user-info">
+                                    <div class="user-name"><h5>Jane Doe</h5></div>
+                                    <p class="user-post">2 Days ago</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-top">
+                                <img src="https://images.unsplash.com/photo-1532980400857-e8d9d275d858?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=400&ixid=MnwxfDB8MXxyYW5kb218MHx8Zm9vZHx8fHx8fDE3MDE3OTMzOTY&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=600" alt="">
+                            </div>
+
+                            <div class="card-body">
+                                <span class="tag  tag-brown">Food</span>
+                                <h4>Delicious Food</h4>
+                                <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi perferendis molestiae non nemo doloribus. Doloremque, nihil! At ea atque quidem!</p>
+                            </div>
+
+                            <div class="card-bott">
+                                <div class="user"><div class="user-icon  u2"><i class="fa-solid fa-user"></i></div></div>
+                                <div class="user-info">
+                                    <div class="user-name"><h5>Jane Doe</h5></div>
+                                    <p class="user-post">2 Days ago</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-top">
+                                <img src="https://images.unsplash.com/photo-1581112606039-360b4ae54e42?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=400&ixid=MnwxfDB8MXxyYW5kb218MHx8Y2FyLGF1dG9tb2JpbGV8fHx8fHwxNzAxNzY5MDkx&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=600" alt="">
+                            </div>
+
+                            <div class="card-body">
+                                <span class="tag  tag-red">Automobile</span>
+                                <h4>Race To Your Heart Content</h4>
+                                <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi perferendis molestiae non nemo doloribus. Doloremque, nihil! At ea atque quidem!</p>
+                            </div>
+
+                            <div class="card-bott">
+                                <div class="user"><div class="user-icon  u3"><i class="fa-solid fa-user"></i></div></div>
+                                <div class="user-info">
+                                    <div class="user-name"><h5>Jane Doe</h5></div>
+                                    <p class="user-post">2 Days ago</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+                
+                <div class="box  m7" id="contact">
+                    <div class="form">
+                        <div class="ftop">
+                            <div class="ftop1">
+                                <div class="icon"><div class="icons"><i class="fa-solid fa-location-dot"></i></div></i></div><br>
+                                <div class="msg"><b>Address:</b>198 West 21th Street 
+                                </div>
+                            </div>
+                            <div class="ftop1">
+                                <div class="icon"><div class="icons"><i class="fa-solid fa-phone"></i></div></div><br>
+                                <div class="msg"><b>Phone:</b>+5556789012</div>
+                            </div>
+                            <div class="ftop1">
+                                <div class="icon"><div class="icons"><i class="fa-solid fa-paper-plane"></i></div></div><br>
+                                <div class="msg"><b>Email:</b> info@yoursite.com</div>
+                            </div>
+                            <div class="ftop1">
+                                <div class="icon"><div class="icons"><i class="fa-solid fa-earth-americas"></i></div></div><br>
+                                <div class="msg"><b>Website:</b> yoursite.com</div>
+                            </div>
+                        </div><br>
+
+                        <div class="fbottom">
+                            <div class="fourm">
+                                <div class="contact-us"><h2>Contact-Us</h2></div><br>
+                                <div class="cp-2">
+                                    <div class="name fgp">
+                                        <div class="heading"><h4>Full Name</h4></div>
+                                        <div class="inp"><input class="input" type="text" placeholder="Name"></div>
+                                    </div>
+                                    <div class="address  fgp">
+                                        <div class="heading"><h4>Email Address</h4></div>
+                                        <div class="inp"><input class="input" type="email" placeholder="Email"></div>
+                                    </div>
+                                </div>
+                                <div class="subject  fgp">
+                                    <div class="heading"><h4>Subject</h4></div>
+                                    <div class="inp"><input class="input" type="text" placeholder="Subject"></div>
+                                </div>
+                                <div class="message  fgp">
+                                    <div class="heading"><h4>Message</h4></div>
+                                    <div class="inp"><textarea class="input" placeholder="Message"></textarea></div>
+                                </div>
+                                <button class="send  fgp">Send Message</button>
+                            </div>
+                            <div class="fimage"><img src="https://preview.colorlib.com/theme/bootstrap/contact-form-03/images/img.jpg.webp" alt=""></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
