@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Operations</title>
+</head>
+<body>
+
+    <!-- push
+    Pop
+    Shift
+    Unshift
+    Map  -->
+
+
+    <script>
+
+        let a = [10, 20, 30, 40, 50];
+
+        // Push
+        a.push(60);
+        console.log("After push:", a);
+
+        // Pop
+        let poppedValue = a.pop();
+        console.log("Popped value:", poppedValue);
+        console.log("After pop:", a);
+
+        // Shift
+        let shiftedValue = a.shift();
+        console.log("Shifted value:", shiftedValue);
+        console.log("After shift:", a);
+
+        // Unshift
+        a.unshift(5);
+        console.log("After unshift:", a);
+
+        // Map
+        let b = a.map(function(item) {
+            return item - 1;
+        });
+
+        console.log("Original array:", a);
+        console.log("Mapped array:", b);
+
+        // Odd Even
+        let c = [10, "rahul", -33, 40, "string", 60, -77, 80];
+
+        let d = c.map(function(item) {
+            if (typeof item === 'number') {
+                if(item % 2 == 0){
+                    return "positive";
+                }
+                else{
+                    return "Negative";
+                }
+            } else {
+                return "String";
+            }
+        });
+
+        console.log(d);
+
+        // ye ek call back function hota hai and ye high order function hota hai
+        let ab = [10,"rahul",-33,40,"string",60,-70,80];
+        let bc= a.map(function(item){
+            if(item >= 0){
+               return "positive";
+            }
+            else if(item >= "a" && item <= "z" || item >= "A" && item <= "Z"){
+                return "String";
+            } 
+            else if(item < 0){
+                return "Nagtive";
+            }
+           
+            else {
+                return "nagtive";
+            }
+        })
+        console.log(bc);
+
+        //  filter ye hmara vhi data filter karke deta hai ju=itna hamne filter kiya hai
+        //  ishme do perameter de sakte hai pahle vala value or dusra indexing.
+
+
+        let e = [10,20,40,303,4440,3933,54,"fds","redfds"];
+        let f = a.filter((item) =>{
+            if(item % 2 == 0){
+                return "even"
+            }
+            else{
+                "odd"
+            }
+            return item > 50;
+        })
+        console.log(f);
+
+
+        // reduce ye apne array me se value ko add , mul , dev , karke deta hai 
+
+        let aa = [10, 20, 40, 303, 4440, 3933, 54];
+        let max = 0;
+            let bb = a.reduce((x,y) =>{
+                
+                if(x>y){
+                    return x;
+                }
+                else{
+                    return y;
+                }
+                
+            })
+            console.log(bb);
+
+
+
+    </script>
+</body>
+</html>
