@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Slice
+    Splice
+    Split
+    Join
+    Flat -->
+
+
+
+
+
+
+    <script>
+        //slice
+        let a = [10,20,30,40,50,60];
+        console.log(a.slice(2,4));
+        console.log(a.slice(2));  //last tk print krega...end point khud consider krega
+        console.log(a.slice(-4, -1));
+
+
+        //splice
+        let b = [10,20,30,40,50,60,70,80,90,100];
+        // console.log(b);
+        // b.splice(-5,3,"Aman","Mohit");// (Starting Index, Number of elements to delete from starting index, add element in place of deleted elements,kitne bhi add krr skte h)
+        // console.log(b);
+        b.splice(0,5);  // prints [60, 70, 80, 90, 100]
+        console.log(b);
+        
+        
+        //String
+        let c = "Mohit,Rohit,Aman,Vaibhav,Rahul,Jeff,Joby,Prateek";
+        console.log(c);
+        console.log(typeof c);
+        console.log(c.split(","));
+        console.log(c.split("i"));
+
+        let d = "Mohit-Rohit-Aman-Vaibhav-Rahul-Jeff-Joby-Prateek";
+        console.log(d.split("-"));
+        let e = d.split("-");
+        console.log(e.join(","));
+
+
+        let f = [10,20,30,[0,1,[1.5,1.6,[0,0,['m','i',["Mohit"],1,3],0,0,0],1.7,1.5,7.8],4,5,2,3],40,50,60,70,80,90,100];
+        console.log(f[3][2][2][2][2][0]);
+
+        let g = [10,20,[70,80,["Aman",[100,200],"Ankit"],90],30,[100,["Mohit",[100,200],"Rohit"],200,300],40,50];
+        console.log(g.flat(3));
+
+    </script>
+    
+
+
+
+
+
+</body>
+</html>
