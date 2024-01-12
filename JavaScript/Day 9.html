@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="text">
+    <button id="submit">Submit</button><br><br>
+    <button id="print">Print Array</button><br><br>
+    <button id="even">even</button>
+    <button id="odd">Odd</button>
+    <button id="reverse">Reverse</button>
+    <h1 id="Even"></h1>
+    <h1 id="Odd"></h1>
+
+
+    <script>
+        let a=[];
+        let b=[];
+        let btn=document.querySelector("#submit")
+        btn.addEventListener('click',function(){
+            let c=document.querySelector("input").value;
+            document.querySelector("input").value="";
+            document.querySelector("input").focus();
+
+            // console.log(c)
+            if(c%2==0)
+            {
+                a.push(c);
+
+            }
+            else{
+                b.push(c);
+            }
+        })
+        console.log(a)
+        console.log(b)
+
+        document.getElementById("print").onclick=function(){
+            // a.map(function(item){
+
+            //     document.getElementById("eventext").innerHTML +=item;
+            // })
+            document.getElementById("Even").innerHTML=a.join(" ");
+             document.getElementById("Odd").innerHTML=b.join(" ");
+        }
+        
+        document.getElementById("even").onclick=function()
+        {
+            a.pop();
+            document.getElementById("Even").innerHTML=a.join(" ");
+        }
+
+        document.getElementById("odd").onclick=function()
+        {
+            b.pop();
+            document.getElementById("Odd").innerHTML=b.join(" ");
+        }
+
+        document.getElementById("reverse").onclick=function(){
+            let g=a.pop();
+            a.unshift(g);
+            document.getElementById("Even").innerHTML=a.join(" ");
+
+            let h=b.pop();
+            b.unshift(h)
+            document.getElementById("Odd").innerHTML=b.join(" ");
+        }
+
+    </script>
+
+
+
+</body>
+</html>
