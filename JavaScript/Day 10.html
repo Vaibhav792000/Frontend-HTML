@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+        // let obj1 = {
+        //     Name : "Vaibhav",
+        //     Age : 23,
+        //     City : "Jaipur",
+        //     Pin_Code : 302004,
+        // };
+
+        // let obj2 = {
+        //     Name : "Mohit",
+        //     Age : 25,
+        //     City : "Udaipur",
+        //     Pin_Code : 302234,
+        // };
+
+        // let obj3 = {
+        //     Name : "Rahul",
+        //     Age : 20,
+        //     City : "Ajmer",
+        //     Pin_Code : 362184,
+        // };
+
+        // console.log(obj1.Name, obj1.Age, obj1.City, obj1.Pin_Code);
+        // console.log(obj2.Name, obj2.Age, obj2.City, obj2.Pin_Code);
+        // console.log(obj3.Name, obj3.Age, obj3.City, obj3.Pin_Code);
+
+        // -*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+
+        let new_array = [
+        {
+            Name : "Rahul",
+            Age : 20,
+            City : "Ajmer",
+            Pin_Code : 362184,
+        },
+        {
+            Name : "Vaibhav",
+            Age : 23,
+            City : "Jaipur",
+            Pin_Code : 302004,
+        },
+        {
+            Name : "Mohit",
+            Age : 25,
+            City : "Udaipur",
+            Pin_Code : 302884,
+        },
+        ];
+
+        console.log(new_array);
+        // to print array
+
+        for(let i of new_array){
+            console.log(i);
+            // to print all
+        }
+
+        for(let i of new_array){
+            console.log(i.Name);
+            console.log(i.Age);
+            console.log(i.City);
+            // to print particular
+        }
+
+        for(let i of new_array){
+            console.log(i.Name,i.Age, i.City, i.Pin_Code);
+            // to print outside
+        }
+
+
+        let myObj = {
+            name: "John",
+            age: 30,
+            cars:[
+                {name:"Ford", Model:["Fiesta", "Focus", "Mustang"] },
+                {name:"BMW", Model:["320", "X3", "X5"] },
+                {name:"Fiat", Model:["500", "Panda"] }
+            ]
+        }
+        console.log(myObj);
+    </script>
+
+
+
+</body>
+</html>
